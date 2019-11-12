@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+       <data>
+              <variable
+                  name="movie"
+                  type="com.example.simpledagger.model.movies.Response" />
+       </data>
+       <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+           android:id="@+id/swiprefresh"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:background="#BDB8B8"
+
+           tools:context=".presentation.view.MainActivity">
+              <com.facebook.shimmer.ShimmerFrameLayout
+                  android:id="@+id/shimmer_view_container"
+                  android:layout_width="match_parent"
+
+                  android:layout_height="match_parent"
+                  >
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:orientation="vertical"
+                         android:layout_height="wrap_content">
+                     <include layout="@layout/placeholder_layout"></include>
+                            <include layout="@layout/placeholder_layout"></include>
+                            <include layout="@layout/placeholder_layout"></include>
+
+                     </LinearLayout>
+
+              </com.facebook.shimmer.ShimmerFrameLayout>
+              <androidx.recyclerview.widget.RecyclerView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/recycleview"
+                  />
+
+       </LinearLayout>
+       </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
