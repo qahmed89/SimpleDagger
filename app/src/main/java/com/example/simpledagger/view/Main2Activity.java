@@ -41,7 +41,6 @@ public class Main2Activity extends AppCompatActivity implements profileAdapter.O
         dbs = new ArrayList<>();
 
         profileAdapter = new profileAdapter(dbs, Main2Activity.this, this);
-
         activityMain2Binding = DataBindingUtil.setContentView(this, R.layout.activity_main2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         activityMain2Binding.recycleview.setLayoutManager(layoutManager);

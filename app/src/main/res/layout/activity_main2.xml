@@ -6,8 +6,10 @@
        <data>
               <variable
                   name="movie"
-                  type="com.example.simpledagger.model.movies.Response" />
+                  type="com.example.simpledagger.model.movies.Response
+" />
        </data>
+
        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
            android:id="@+id/swiprefresh"
            android:layout_width="match_parent"

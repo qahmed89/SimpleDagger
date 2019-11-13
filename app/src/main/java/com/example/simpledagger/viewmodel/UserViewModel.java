@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -36,12 +37,12 @@ public class UserViewModel extends ViewModel {
 //        this.context = context;
 //    }
 
-    public MutableLiveData<Response> getModelMutableLiveDatas(Context context) {
+    public LiveData<Response> getModelMutableLiveDatas(Context context) {
         loadDats(context);
         return modelMutableLiveDataMovie;
     }
 
-    public MutableLiveData<Details> getModelMutableLiveDateDetails(Context context, int id) {
+    public LiveData<Details> getModelMutableLiveDateDetails(Context context, int id) {
         loadDetails(id, context);
         return modelMutableLiveDateDetails;
     }
