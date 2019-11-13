@@ -19,5 +19,5 @@ public class UserRepository {
         return userService.getDb();
     }
     public Single<Details> detailsmodelSingle(int id){return userService.getDetails(id);}
-
+//asdsdadada
 }
